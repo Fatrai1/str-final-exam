@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-12 mt-2">
     <h2>Felhasználói lista</h2>
-    <div class="col-12">
+    <div class="col-8 offset-2">
       <button class="btn btn-primary btn-block" [routerLink]="['user/' + 0]">
           <i class="fa fa-edit"></i>
           Új felhasználó hozzáadása
@@ -33,7 +33,7 @@
           <td>{{ user.active }}</td>
           <td>
             <div>
-              <button [routerLink]="['user/' + user.id]" class="btn btn-info bg">
+              <button [routerLink]="['user/' + user.id]" class="btn btn-primary bg">
                 <i class="fa fa-pencil"></i>
               </button>
               <button (click)="onDelete(user)" class="btn btn-danger bg">

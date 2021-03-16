@@ -31,7 +31,7 @@ export class UserListComponent implements OnInit {
   }
 
   onDelete(user: User): void {
-    if (!confirm("Biztosan törölni akarod?")) {
+    if (!window.confirm("Biztosan törölni akarod?")) {
       return;
     }
     this.userService.remove(user).subscribe(
