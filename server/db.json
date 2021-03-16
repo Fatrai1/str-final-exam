@@ -1,29 +1,8 @@
 {
   "users": [
     {
-      "id": 6,
-      "name": "Catherin Hammatt",
-      "email": "chammatt5@w3.org",
-      "address": "64923 Butterfield Parkway",
-      "active": false
-    },
-    {
-      "id": 7,
-      "name": "Norean Danbury",
-      "email": "ndanbury6@naver.com",
-      "address": "23 Sommers Drive",
-      "active": true
-    },
-    {
-      "id": 8,
-      "name": "Stillman Crowche",
-      "email": "scrowche7@umich.edu",
-      "address": "53 Bunting Court",
-      "active": true
-    },
-    {
       "id": 9,
-      "name": "Roderich Jimmison",
+      "name": "Roderivwejvbk",
       "email": "rjimmison8@nih.gov",
       "address": "0758 Pearson Junction",
       "active": true
@@ -671,6 +650,13 @@
       "email": "kisss@gmail.com",
       "address": "Budapest",
       "active": true
+    },
+    {
+      "id": 102,
+      "name": "Gáspár Laci",
+      "email": "gaspar@gmail.com",
+      "address": "Veszprém",
+      "active": false
     }
   ]
 }

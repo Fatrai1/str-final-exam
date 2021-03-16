@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/service/user.service';
 
@@ -8,14 +9,15 @@ import { UserService } from 'src/app/service/user.service';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss']
 })
+
 export class UserListComponent implements OnInit {
 
   users$: Observable<User[]> = this.userService.getAll();
   phrase = '';
   columnKey: string = '';
-  constructor(
-    private userService: UserService,
-  ) { }
+
+
+  constructor(private userService: UserService,) {}
 
   ngOnInit(): void {
   }
@@ -35,7 +37,5 @@ export class UserListComponent implements OnInit {
     this.userService.remove(user).subscribe(
       () => location.reload()     
     );  
-
   }
-
 }

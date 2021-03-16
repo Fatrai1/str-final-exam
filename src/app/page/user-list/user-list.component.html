@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-12 mt-2">
-    <h2>User List</h2>
+    <h2>Felhasználói lista</h2>
     <div class="col-12">
       <button class="btn btn-primary btn-block" [routerLink]="['user/' + 0]">
           <i class="fa fa-edit"></i>
-          Add new user
+          Új felhasználó hozzáadása
       </button>
   </div>
     <div class="col-12 mt-2 mb-2 col-lg-4">
@@ -14,7 +14,7 @@
       </form>
     </div>
     <table class="table table-striped">
-      <thead>
+      <thead class="thead">
         <tr>
           <th class="head" (click)="onColumnSelect('id')">#</th>
           <th class="head" (click)="onColumnSelect('name')">Name</th>
@@ -32,11 +32,11 @@
           <td>{{ user.address }}</td>
           <td>{{ user.active }}</td>
           <td>
-            <div class="btn-group">
-              <button [routerLink]="['user/' + user.id]" class="btn btn-info">
+            <div>
+              <button [routerLink]="['user/' + user.id]" class="btn btn-info bg">
                 <i class="fa fa-pencil"></i>
               </button>
-              <button (click)="onDelete(user)" class="btn btn-danger">
+              <button (click)="onDelete(user)" class="btn btn-danger bg">
                 <i class="fa fa-trash"></i>
               </button>
             </div>
