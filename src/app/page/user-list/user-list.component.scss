@@ -1,5 +1,10 @@
 .head {
     cursor: pointer;
+    transition: .7s;
+}
+.head:hover {
+    background-color: rgb(101, 62, 241);
+    color: rgb(255, 254, 254);
 }
 h2 {
     color: rgb(79, 82, 250);
@@ -7,7 +12,7 @@ h2 {
     margin-bottom: 2rem;
 }
 .thead {
-    color: white;
+    color: rgb(212, 212, 212);
     background-color: rgb(94, 131, 253);
 }
 .bg {

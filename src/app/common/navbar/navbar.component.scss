@@ -2,5 +2,9 @@
     background-image: linear-gradient(to right, rgb(51, 51, 250), rgb(135, 156, 248), rgb(56, 56, 253));
 }
 .nav-item {
+    color: rgb(206, 206, 206);
+    transition: .5s;
+}
+.nav-item:hover {
     color: white;
 }

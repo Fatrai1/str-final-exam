@@ -22,12 +22,12 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onChangePhrase(event: any): void {
-    this.phrase = (event.target as HTMLInputElement).value;
-  }
-
   onColumnSelect(key: string): void {
     this.columnKey = key;    
+  }
+
+  onChangePhrase(event: any): void {
+    this.phrase = (event.target as HTMLInputElement).value;
   }
 
   onDelete(user: User): void {
