@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { User } from 'src/app/model/user';
@@ -12,6 +12,8 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./user-editor.component.scss']
 })
 export class UserEditorComponent implements OnInit {
+  
+  updating: boolean = false;
 
   /**
    * user$ {Observable<User>}
@@ -19,12 +21,12 @@ export class UserEditorComponent implements OnInit {
    * 1. If the params.id is 0: new User().
    * 2. If the params.id isn't 0: a user from the database based on its id.
    */
+
   user$: Observable<User> = this.activatedRoute.params.pipe(
-    switchMap( params => {
+    switchMap(params => {
       if (Number(params.id) === 0) {
         return of(new User());
       }
-
       return this.userService.get(Number(params.id));
     })
   );
@@ -32,9 +34,22 @@ export class UserEditorComponent implements OnInit {
   constructor(
     private userService: UserService,
     private activatedRoute: ActivatedRoute,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
   }
 
+  onUpdate(form: NgForm, user: User): void {
+    if (user.id === 0) {
+      this.userService.create(user).subscribe(
+        () => this.router.navigate(['user'])
+      );
+    } else {
+      this.updating = true;
+      this.userService.update(user).subscribe(
+        () => this.router.navigate(['user'])
+      );
+    }    
+  }
 }

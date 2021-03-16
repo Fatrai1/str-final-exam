@@ -29,11 +29,12 @@ export class UserListComponent implements OnInit {
   }
 
   onDelete(user: User): void {
-    if (!confirm("Are you sure?")) {
+    if (!confirm("Biztosan törölni akarod?")) {
       return;
     }
-    this.userService.remove(user);
-    //this.router.navigate(['user']),     
+    this.userService.remove(user).subscribe(
+      () => location.reload()     
+    );  
 
   }
 

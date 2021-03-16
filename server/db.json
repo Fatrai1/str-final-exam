@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": 5,
-      "name": "Maxy Pendall",
-      "email": "mpendall4@answers.com",
-      "address": "27588 Upham Lane",
-      "active": false
-    },
-    {
       "id": 6,
       "name": "Catherin Hammatt",
       "email": "chammatt5@w3.org",
@@ -54,7 +47,7 @@
       "name": "Gawain McKillop",
       "email": "gmckillopb@geocities.jp",
       "address": "0 School Way",
-      "active": false
+      "active": true
     },
     {
       "id": 13,
@@ -671,6 +664,13 @@
       "email": "mcosbee2r@go.com",
       "address": "0642 Spaight Junction",
       "active": false
+    },
+    {
+      "id": 101,
+      "name": "Kiss Gáspár",
+      "email": "kisss@gmail.com",
+      "address": "Budapest",
+      "active": true
     }
   ]
 }
